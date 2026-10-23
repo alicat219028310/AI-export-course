@@ -1,0 +1,23 @@
+import random 
+
+destinations = {
+    "beaches": ["Bali", "maldives", "hawaii"],
+    "mountain": ["murree", "neelum valley", "naran"],
+    "cities": ["paris", "london", "new york"]
+}
+jokes = [
+    "Why don't scientists trust atoms? Because they make up everything!",
+    "Why did the scarecrow win an award? Because he was outstanding in his field!",
+]
+def recommend():
+    choice = input("Beaches, cities, or mountains? ").lower()
+    if choice in destinations:
+        place = random.choice(destinations[choice])
+        print(f"Travelbot: Visit {place}")
+        answer = input("Do you like the destination? yes or no.").lower()
+        if answer == "yes":
+            print("travelbot: have a great trip")
+        else:
+            print("travelbot: maybe next time")
+    else:
+        print("travelbot: Sorry i dont have a destination for you. please choose mountains beaches or cities")
